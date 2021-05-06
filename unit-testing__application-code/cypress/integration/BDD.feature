@@ -20,24 +20,24 @@ Scenario: the number 5 should buzz
 
 Scenario Outline: play bowling
   Given there are <start> cucumbers
-  When I eat <eat> cucumbers
+  When j'appelle la fonction
   Then I should have <left> cucumbers
 
   Examples:
-    | start | eat | left |
-    |    12 |   5 |    7 |
-    |    20 |   5 |   15 |
+    | start | eat | 
+    |    12 |   5 | 
+    |    20 |   5 | 
 
 
- Scenario: two cases in
-    Given I try with 
-    |   nombre |
-    |   5      |
-    |   3      |
-    When j'appelle la fonction avec les données précédentes
-    Then the output shall 
-    |   output |
-    | buzz     |
-    | fizz     |
+#  Scenario: two cases in
+#     Given I try with 
+#     |   nombre |
+#     |   5      |
+#     |   3      |
+#     When j'appelle la fonction avec les données précédentes
+#     Then the output shall 
+#     |   output |
+#     | buzz     |
+#     | fizz     |
 
     

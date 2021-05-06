@@ -12,7 +12,7 @@ Scenario: the number 5 should buzz
     Then the output shall be 'buzz' and not 'fizz'
     And the number was 5
 
-    Scenario: the number 15 should fizzbuzz
+ Scenario: the number 15 should fizzbuzz
     Given I try with 15
     When j'appelle la fonction
     Then the output shall be 'fizzbuzz' and not 'fizz' 
@@ -27,3 +27,17 @@ Scenario Outline: play bowling
     | start | eat | left |
     |    12 |   5 |    7 |
     |    20 |   5 |   15 |
+
+
+ Scenario: two cases in
+    Given I try with 
+    |   nombre |
+    |   5      |
+    |   3      |
+    When j'appelle la fonction avec les données précédentes
+    Then the output shall 
+    |   output |
+    | buzz     |
+    | fizz     |
+
+    

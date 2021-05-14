@@ -19,25 +19,28 @@ Scenario: the number 5 should buzz
     And the number was 15
 
 Scenario Outline: play bowling
-  Given there are <start> cucumbers
+  Given I try with <number>
   When j'appelle la fonction
-  Then I should have <left> cucumbers
+  Then the output shall be '<output>'
 
   Examples:
-    | start | eat | 
-    |    12 |   5 | 
-    |    20 |   5 | 
+    | number | output    | 
+    |    3   |  fizz     | 
+    |    5   |  buzz     | 
+    |    15  |  fizzbuzz | 
 
 
-#  Scenario: two cases in
-#     Given I try with 
-#     |   nombre |
-#     |   5      |
-#     |   3      |
-#     When j'appelle la fonction avec les données précédentes
-#     Then the output shall 
-#     |   output |
-#     | buzz     |
-#     | fizz     |
+ Scenario: two cases in one
+    Given I try with :
+    |   nombre |
+    |   3      |
+    |   5      |
+    |  15     |
+    #When j'appelle la fonction avec les données précédentes
+    Then the output shall be
+     |   output |
+     | fizz     |
+     | buzz     |
+     | fizzbuzz |
 
     

@@ -4,6 +4,7 @@ module.exports = (num) => {
   }
 
   if (num % 3 === 0) {
+    //throw 'ca va pas la tête';
     return 'fizz'
   }
 

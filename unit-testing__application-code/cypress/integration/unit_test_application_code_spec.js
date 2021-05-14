@@ -39,7 +39,8 @@ describe('Unit Test Application Code', function () {
       })
     }
 
-    it('returns "fizz" when number is multiple of 3', function () {
+    //ceci est une pipe
+    it('returns "toto" when number is multiple of 18', function () {
       numsExpectedToEq([9, 12, 18], 'fizz')
     })
 
